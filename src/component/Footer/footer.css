@@ -1,0 +1,68 @@
+
+.footer {
+  width: 100vw;
+  height: 4rem;
+  background-color: rgb(40, 40, 40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* To allow absolute positioning for icons */
+  font-weight: 300;
+  font-size: small;
+  padding: 0 2rem;
+  color: white; /* Ensure the text is visible on a dark background */
+}
+
+.links {
+  position: absolute;
+  right: 2rem; /* Position icons to the right side */
+  display: flex;
+  justify-content: space-between;
+  width: 200px; /* Set a width to control spacing between the groups */
+}
+
+.left-icons,
+.right-icons {
+  display: flex;
+  gap: 0.75rem; /* Adds space between icons within each group */
+}
+
+.link {
+  object-fit: cover;
+  height: 1.4rem;
+  width: 1rem;
+  margin: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .links {
+    position: static; /* Reset position for smaller screens */
+    justify-content: center;
+    margin-top: 1rem;
+    width: auto;
+    gap: 1rem;
+  }
+
+  .link {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+=======
+.footer{
+    width: 100vw;
+    height: 4rem;
+    background-color: rgb(40,40,40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: small;
+}

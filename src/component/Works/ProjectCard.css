@@ -1,0 +1,63 @@
+.project-card {
+  padding: 1rem;
+  background: rgb(30, 30, 30);
+
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: 400px;
+  background-color: #0c0e19;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+  border-radius: 2rem;
+}
+
+.project-banner {
+  width: 100%; 
+  height: 250px; 
+  border-radius: 1rem; 
+  object-fit: cover; 
+}
+
+.project-title {
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.project-description {
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding-top: 0.5rem;
+}
+
+.project-buttons {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 1.5rem;
+  background-color: #465697;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+.demo-btn {
+  margin-top: 2.5rem;
+}
+
+.source-btn {
+  margin-top: 2.5rem;
+}

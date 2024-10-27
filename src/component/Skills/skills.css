@@ -1,0 +1,330 @@
+/* General Styles */
+#skills {
+  margin-top: 150px;
+  padding-top: 50px; /* Optional: add padding to push content down */
+
+  overflow: hidden;
+  width: 100vw;
+  max-width: 65rem;
+  display: felx;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skilTitle {
+  font-size: 3rem;
+}
+.skillDesc {
+  font-family: sans, italic;
+}
+
+#about {
+  padding: 80px 0;
+  color: #ababab;
+}
+
+/* Flexbox Row */
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* About Column Styles */
+.about-col-1 {
+  flex-basis: 35%;
+}
+
+.about-col-img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.about-col-2 {
+  flex-basis: 60%;
+}
+
+/* Subtitle Styles */
+.sub-title {
+  font-size: 50px;
+  font-weight: 600;
+  color: white;
+}
+
+/* Paragraph Styles */
+.phara {
+  margin-top: 50px;
+  padding-bottom: 2cm;
+  font-family: sans;
+  color: #c7c6c1;
+}
+
+/* Skills List */
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-item {
+  margin-bottom: 20px;
+}
+
+.skill-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: aqua;
+}
+
+.skill-details {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Tab Titles */
+.tab-titles {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+/* Tab Links */
+.tab-links {
+  margin-right: 100px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: aqua;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+  width: 100%;
+}
+
+/* Tab Contents */
+.tab-contents ul li span {
+  color: aqua;
+  font-size: 24px;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: flex; /* No change */
+  flex-wrap: wrap; /* No change */
+  justify-content: space-between; /* No change */
+}
+
+/* Download Button Styles */
+/* Download Button Styles */
+.downloadButton {
+  background-color: #ffffff;
+  color: gray;
+  border-radius: 20px;
+  border: 2px solid #000000;
+  padding: 10px 20px; /* You can also use padding: 1rem 2rem; for responsive padding */
+  font-size: 1rem; /* Use relative units for responsiveness */
+  cursor: pointer;
+  margin: 50px auto; /* Center the button horizontally */
+  display: block; /* Make it a block element for centering */
+  max-width: 200px; /* Set a max-width to limit its size */
+  transition: background-color 0.3s, color 0.3s; /* Add transition for hover effects */
+}
+
+.downloadButton:hover {
+  background-color: aqua;
+  color: #999999;
+}
+
+/* Media Queries for Responsive Adjustments */
+@media (max-width: 768px) {
+  .downloadButton {
+    width: 80%; /* Make the button take more width on smaller screens */
+    padding: 12px 0; /* Adjust padding for a larger tap target */
+    font-size: 1.2rem; /* Increase font size for better readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .downloadButton {
+    font-size: 1rem; /* Ensure font size is not too large on very small screens */
+    padding: 10px 0; /* Adjust padding for a more compact look */
+  }
+}
+
+.downloadButton:hover {
+  background-color: aqua;
+  color: #999999;
+}
+
+/* Card Styles */
+.card {
+  background-color: rgb(50, 50, 50);
+  border-radius: 20px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  margin-bottom: 0;
+  flex: 1 1 30%;
+  max-width: 500px;
+  padding: 20px;
+  height: 390px;
+}
+
+/* Card Hover Effect */
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* Tab Contents List Styles */
+.tab-contents ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tab-contents ul li {
+  margin-bottom: 20px;
+}
+
+/* Skills Container */
+.skills-content ul li p {
+  color: #c7c6c1; /* Apply this color to the paragraph text inside the skills section */
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: sans;
+}
+
+/* Experience Section */
+.skills-content ul li span {
+  color: aqua; /* Apply the same color to the spans under the Experience section */
+  font-family: bold italic;
+}
+
+/* Text and Image Layout */
+.text-img {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Coder Image Styles */
+.coder-image {
+  border-radius: 10px;
+  width: 500px;
+  height: 370px;
+  object-fit: cover;
+}
+
+/* Additional spacing for the card in text-img */
+.card {
+  margin-right: 0;
+  flex: 1;
+}
+
+/* Education List */
+.education-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.education-item {
+  margin-bottom: 20px;
+}
+
+.degree-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.degree-details,
+.certifications-details {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #c7c6c1;
+}
+
+.certifications-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #c7c6c1;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .tab-links {
+    margin-right: 30px; /* Adjust margin for smaller screens */
+    font-size: 16px; /* Smaller font size */
+  }
+
+  .tab-contents {
+    flex-direction: column; /* Stack tab contents vertically */
+    align-items: center; /* Center content */
+  }
+
+  .card {
+    flex: 1 1 100%; /* Full width for cards */
+    max-width: none; /* Remove max-width */
+    margin-bottom: 20px; /* Space between cards */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .coder-image {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .skillTitle {
+    font-size: 80px; /* Smaller font size for mobile */
+  }
+
+  .skills-content ul li span {
+    font-size: 20px; /* Smaller span font size */
+  }
+
+  .skills-content ul li p {
+    font-size: 14px; /* Smaller paragraph font size */
+  }
+
+  .degree-title,
+  .certifications-title {
+    font-size: 1.1em; /* Smaller font size for education section */
+  }
+
+  .degree-details,
+  .certifications-details {
+    font-size: 0.9em; /* Smaller details font size */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skillTitle {
+    font-size: 50px; /* Further reduce for very small screens */
+    margin-top: 60px; /* Adjust margin */
+  }
+
+  .tab-links {
+    margin-right: 20px; /* Less margin */
+    font-size: 14px; /* Even smaller font size */
+  }
+
+  .tab-contents {
+    padding: 0 1rem; /* Add some padding */
+  }
+}

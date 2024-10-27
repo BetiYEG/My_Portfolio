@@ -1,0 +1,197 @@
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate .skillBar:nth-child(odd) {
+  animation: slideInLeft 0.8s forwards ease;
+  animation-delay: 0.2s;
+}
+
+.animate .skillBar:nth-child(even) {
+  animation: slideInRight 0.8s forwards ease;
+  animation-delay: 0.4s;
+}
+
+/* Flexbox layout for services */
+.skillBars {
+  display: flex;
+  justify-content: space-between; /* Spreads the columns apart */
+  flex-wrap: wrap; /* Allows cards to wrap if needed */
+  gap: 2rem; /* Adds space between columns */
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.skillBar {
+  width: 48%; /* Ensures two cards fit side by side */
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  background-color: rgb(50, 50, 50);
+  text-align: left;
+  transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.skillBar:hover {
+  transform: scale(1.03); /* Scale effect on hover */
+  box-shadow: 0px 4px 10px aqua; /* Adding shadow effect on hover */
+}
+
+.skillBar:nth-child(odd) {
+  float: left; /* Align odd cards to the left */
+}
+
+.skillBar:nth-child(even) {
+  float: right; /* Align even cards to the right */
+}
+
+.skillBarImg {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  margin-right: 2rem;
+}
+
+.skillBarText > h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.skillBarText > p {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 720px) {
+  .skillBars {
+    flex-direction: column;
+  }
+
+  .skillBar {
+    width: 100%; /* Stack cards on top of each other on smaller screens */
+  }
+
+  .skillBarText > h2 {
+    font-size: 1.25rem;
+  }
+
+  .skillBarText > p {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skillBar {
+    flex-direction: column;
+  }
+
+  .skillBarText > h2 {
+    font-size: 1rem;
+  }
+
+  .skillBarText > p {
+    font-size: 0.75rem;
+  }
+
+  .skillBarImg {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+/* Service section container */
+#services {
+  overflow: hidden;
+  width: 100vw;
+  max-width: 65rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.skillTitle {
+  font-size: 3rem;
+  font-weight: 600;
+  padding-top: 3rem;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skillDesc {
+  font-weight: 400;
+  font-size: 1rem;
+  max-width: 51rem;
+  padding: 0 2rem;
+}
+
+/* Animation for image click */
+@keyframes clickAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animation for card click */
+@keyframes cardClickAnimation {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+
+/* Apply animation on click */
+.cardClicked {
+  animation: cardClickAnimation 0.5s forwards;
+}
+
+.clicked {
+  animation: clickAnimation 0.5s forwards;
+}
